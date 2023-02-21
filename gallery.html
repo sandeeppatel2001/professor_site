@@ -1,0 +1,376 @@
+<!DOCTYPE html> 
+<html dir="ltr" lang="en-US"> 
+<head> 
+ 
+<title>Gallery</title> 
+ 
+<script type="text/javascript" src="./js/jquery-1.6.2.js"></script> 
+<script type='text/javascript' src='./js/fancybox/jquery.fancybox-1.3.4.pack.js'></script> 
+<script>
+!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+</script>
+<script type="text/javascript" src="./js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type='text/javascript' src='./js/cufon.js'></script>
+<link rel="stylesheet" type="text/css" href="./js/jquery.fancybox-1.3.4.css" media="screen" />
+<link rel='stylesheet' id='jqueryui_css-css'  href='./css/jqueryui/custom.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox_css-css'  href='./js/fancybox/jquery.fancybox-1.3.0.css' type='text/css' media='all' /> 
+<link rel='stylesheet' id='screen_css-css'  href='./css/screen.css' type='text/css' media='all' /> 
+<link rel='stylesheet' id='videojs_css-css'  href='./js/video-js.css' type='text/css' media='all' /> 
+<link rel='stylesheet' id='vim_css-css'  href='./js/skins/vim.css' type='text/css' media='all' /> 
+<link rel='stylesheet' id='colorpicker_css-css'  href='./js/colorpicker/css/colorpicker.css' type='text/css' media='all' />  
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			*   Examples - images
+			*/
+
+			 
+
+			$("a[rel=example_group]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+				}
+			});
+
+			/*
+			*   Examples - various
+			*/
+
+			$("#prof_cv").fancybox({
+				'width'				: '55%',
+				'height'			: '100%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+			
+			$('[id*="group_pic"]').fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+			 
+		});
+</script> 
+ 
+ <script>
+	function passWord() {
+	var testV = 1;
+	var pass1 = prompt('Please Enter Your Password',' ');
+	while (testV < 3) {
+	if (!pass1) 
+		history.go(-1);
+	if (pass1.toLowerCase() == "pkl@iisc") {
+		alert('Welcome to privileged information. Do not redistribute information available on this page to others without our permission. ');
+		window.open("adbhsdfbkeoiweo.html");
+	break;
+			} 
+	testV+=1;
+	var pass1 = 
+		prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+			}
+	if (pass1.toLowerCase()!="password" & testV ==3) 
+		history.go(-1);
+	return " ";
+			} 
+</script>
+
+
+<meta charset="UTF-8"></head> 
+ 
+ 
+<body class="page"> 
+	
+	<!-- Begin template wrapper --> 
+	<div id="wrapper"> 
+			
+		<!-- Begin header --> 
+		<div id="header_wrapper"> 
+			<div id="top_bar"> 
+					<div class="logo"> 
+						<!-- Begin logo --> 
+					
+												
+<a id="custom_logo" href="http://www.iisc.ac.in/"><img src="./images/IIScLogo.png" alt=""/></a> 						
+						<!-- End logo --> 
+					</div> 
+					
+					<!-- Begin main nav --> 
+					<div id="menu_wrapper"> 
+					
+					    <div class="menu-main-menu-container">
+					    	<ul id="main_menu" class="nav">
+					    		<li ><a href="index.html">Home</a></li>
+                                <li><a href="people.html">People</a></li> 
+                                <li><a href="research.html">Research</a></li> 
+                                <li><a href="experiment.html">Facilities</a></li>
+                                <li><a href="teachings.html">Teaching</a></li>
+                                 <li><a href="publications.html">Publications</a></li>
+								<li class="current-menu-item"><a href="gallery.html">Gallery</a></li> 
+								<li><a><input type="button" value="Internal" onClick="passWord()"> </a></li> 
+							</ul>
+						</div>					
+					</div> 
+					<!-- End main nav -->  
+					
+				</div> 
+				
+				<br class="clear"/> 
+				 
+		<div class="page_caption"> 
+			<div class="caption_inner"> 
+				<div class="caption_header"> 
+					<h2 class="cufon">GALLERY</h2> 
+				</div> 
+				 
+			</div> 
+		</div>
+		
+		<div id="header_pattern"></div>
+		
+		</div>
+		<!-- End header -->
+						
+		<!-- Begin content -->
+		<div id="content_wrapper">
+			
+			<div class="inner">
+			
+				<!-- Begin main content -->
+				<div class="inner_wrapper">
+						
+				<div class="standard_wrapper small"> 
+					   
+					<!-- Begin portfolio content --> 
+										
+					<div class="one_third" style="margin-right:3%"> 
+						<a  id="group_pic1" href="#inlineimg1" class="one_third_img"> 
+						    <img src="./example/group_pic.png" alt="" class="img_nofade"/> 
+						</a> 
+                        <div style="display: none;">
+                            <div id="inlineimg1" style="width:670px;height:495px;overflow:auto;">
+                                	<img src="example/galleryimg1.png" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+						    <span>(From left to right) Piyush, Praveen, Somaiah, Prashant - Founding members of the group</span> 
+						</div> 
+					</div> 
+					
+					
+										    
+					<div class="one_third" style="margin-right:3%"> 
+						<a  id="group_pic2" href="#inlineimg2" class="one_third_img"> 
+						    <img src="./example/prof_dad.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg2" style="width:670px;height:495px;overflow:auto;">
+                                	<img src="example/galleryimg2.png" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div> 
+						
+						<br class="clear"/><br/> 
+																
+						<div class="portfolio_desc"> 
+							  
+							<span>(From left to right) Somaiah, Piyush, Praveen kumar, Jagadish Roy (father of Praveen Kumar)</span> 
+						</div> 
+					</div> 
+
+					<div class="one_third" style="margin-right:3%"> 
+						<a  id="group_pic4" href="#inlineimg4" class="one_third_img"> 
+						    <img src="./example/summer2012.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg4" style="width:560px;height:660px;overflow:auto;">
+                                	<img src="example/galleryimg4.png" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+						    <span>(From left to right) Ankush, Somaiah, Snadeep, Kunal, Piyush, Praveen, Rangasayee, Prashant and Tarang</span> 
+						</div> 
+					</div> 					
+					
+					<div class="one_third" style="margin-right:3%"> 
+						<a  id="group_pic3" href="#inlineimg3" class="one_third_img"> 
+						    <img src="./example/ICSMA2012awards.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg3" style="width:1060px;height:710px;overflow:auto;">
+                                	<img src="example/galleryimg5.png" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+						    <span>Tarang (first from right) receiving best poster award at ICSMA - 16</span> 
+						</div> 
+					</div> 
+							
+					<div class="one_third" style="margin-right:3%"> 
+						<a  id="group_pic5" href="#inlineimg5" class="one_third_img"> 
+						    <img src="./example/group_dinner_06082014.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg5" style="width:1400px;height:790px;overflow:auto;">
+                                	<img src="example/galleryimg6.png" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+							<span>Group dinner: Binay's Farewell party and Welcoming party for Dipali and Dinesh</span> 
+						</div> 
+					</div> 	
+					
+						<div class="one_third" style="margin-right:3%"> 
+						<a  id="group_pic6" href="#inlineimg6" class="one_third_img"> 
+						    <img src="./example/SantanuTalk_Cense.jpg" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg6" style="width:1235px;height:697px;overflow:auto;">
+                                	<img src="example/galleryimg7.jpg" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+							<span>Santanu talking about electro-lithography: Inaugural talk at CeNSE 3rd Annual Student Symposium</span> 
+						</div> 
+					</div> 	
+					
+					<div class="one_half" style="margin-right:6%"> 
+						<a  id="group_pic7" href="#inlineimg7" class="one_half_img"> 
+						    <img src="./example/Om_small.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg7" style="width:1550px;height:635px;overflow:auto;">
+                                	<img src="example/Om_large.png" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+							<span>Professor Rudra Pratap giving a souvenir box to the Honorable PM, Sri Narandra Modi, during his visit to IISc.
+							"Om" written by Santanu using our invention of Electrolithography is one of the three things in this box.</span> <br></br>
+						</div> 
+					</div> 
+
+					<div class="one_third" style="margin-left: 7%"> 
+						<a  id="group_pic8" href="#inlineimg8" class="one_half_img"> 
+						    <img src="./example/groupdinner_2016.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg8" style="width:1420px;height:820px;overflow:auto;">
+                                	<img src="example/groupdinner_2016_1.jpg" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+							<span>Group dinner at Higher Taste - Some and various random reasons for gathering! (September 2016) </span> 
+						</div> 
+					</div> 						
+     			    
+					
+					<div class="one_half" style="margin-right:6%"> 
+						<a  id="group_pic9" href="#inlineimg9" class="one_half_img"> 
+						    <img src="./example/group_lunch2019.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg9" style="width:1650px;height:775px;overflow:auto;">
+                                	<img src="example/group_lunch2019_1.jpg" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+						
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+							<span>Group lunch to celebrate "birthday" of Ajay and succesful colloquiums of Ali, Dipali and Ajay!</span> 
+						</div> 
+					</div> 
+					
+					
+					<div class="one_third" style="margin-left:7%"> 
+						<a  id="group_pic9" href="#inlineimg10" class="one_half_img"> 
+						    <img src="./example/Abhilash-NMD-ATM2019.png" alt="" class="img_nofade"/> 
+						</a>
+                        <div style="display: none;">
+                            <div id="inlineimg10" style="width:1400px;height:900px;overflow:auto;">
+                                	<img src="example/Abhilash-NMD-ATM2019_1.jpg" alt="" class="img_nofade frame"/>
+                                </div> 
+                        </div>
+							
+						<br class="clear"/><br/> 
+						
+						<div class="portfolio_desc"> 
+						     
+							<span> Abhilash getting Dr. A. K. Bose Medal 2019 at IIM ATM 2019 for his ME project work.</span> 
+						</div> 
+					</div> 
+					
+					
+					
+					
+					<br class="clear"/><br/><br/><br/>															
+					 				    
+						 														
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<div><div>
+
+ 
+		</div>
+		
+		<div class="bottom_shadow"></div> 
+		
+		<!-- Begin footer --> 
+		<div id="footer"> 
+			<div id="footer_shadow"></div> 
+		 
+			<br class="clear"/> 
+		
+			<div id="copyright"> 
+				<div class="standard_wrapper" style="text-shadow: 0 1px #000;">
+					  
+					<div style="float:left;margin-top:10px">
+						© Copyright 2019 Praveen Kumar. All Rights Reserved.
+					</div>
+					<br class="clear"/>
+			</div>
+		</div> 
+			
+		</div> 
+		<!-- End footer --> 
+ 
+</div></div> 
+ 
+</body> 
+</html> 
