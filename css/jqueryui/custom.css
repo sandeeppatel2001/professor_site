@@ -2,6 +2,70 @@
 	CSS Reset 
 */
 
+body{
+  overflow-x: hidden;
+}
+#rssBlock{
+  left:0px;
+  height: 80px;
+  background: #FFFFFF;
+  position: absolute;
+  width:1070px;
+  overflow: hidden;
+}
+
+/*remove p*/
+.cnnContents {
+  width:100%;
+  padding-top: 20px;
+  margin:0 auto;
+  font-size: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: 'Museo';
+  font-weight: 300;
+}
+
+.marqueeStyle {
+  display:inline-block;
+  /* Apply animation to this element */
+  -webkit-animation: scrolling-left1 20s linear infinite;
+  animation: scrolling-left1 20s linear infinite;
+}
+
+.marqueeStyle2 {
+  display:inline-block;
+  /* Apply animation to this element */
+  -webkit-animation: scrolling-left2 20s linear infinite;
+  animation: scrolling-left2 20s linear infinite;
+  animation-delay: 10s;
+}
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+    0% {transform: translateX(100%);
+        -webkit-transform: translateX(100%);}
+      100% {transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);}
+}
+@keyframes scrolling-left2 {
+    0% {transform: translateX(0%);
+        -webkit-transform: translateX(0%);}
+      100% {transform: translateX(-200%);
+          -webkit-transform: translateX(-200%);}
+}
+
+@-webkit-keyframes scrolling-left1 {
+    0% {-webkit-transform: translateX(100%);}
+      100% {-webkit-transform: translateX(-100%);}
+}
+@-webkit-keyframes scrolling-left2 {
+    0% {-webkit-transform: translateX(0%);}
+      100% {-webkit-transform: translateX(-200%);}
+}
+
+
+
+/* ///////////////////////////////////////// */
 html,
 body,
 div,
@@ -159,6 +223,7 @@ hr {
 }
 
 #footer {
+  height: 150px;
   width: 100%;
   background: #444 url("../images/footer_bg.png") repeat;
   margin: auto;
@@ -170,6 +235,7 @@ hr {
 }
 
 #footer a {
+  
   color: #fff;
 }
 
@@ -444,7 +510,8 @@ blockquote h3 {
 }
 
 #top_bar {
-  width: 960px;
+  height: 22%;
+  width: 100%;
   margin: auto;
 }
 
