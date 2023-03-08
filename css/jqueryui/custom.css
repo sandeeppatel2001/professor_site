@@ -2,39 +2,39 @@
 	CSS Reset 
 */
 
-body{
+body {
   overflow-x: hidden;
 }
-#rssBlock{
-  left:0px;
+#rssBlock {
+  left: 0px;
   height: 80px;
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
-  width:1070px;
+  width: 1070px;
   overflow: hidden;
 }
 
 /*remove p*/
 .cnnContents {
-  width:100%;
+  width: 100%;
   padding-top: 20px;
-  margin:0 auto;
+  margin: 0 auto;
   font-size: 30px;
   white-space: nowrap;
   text-transform: uppercase;
-  font-family: 'Museo';
+  font-family: "Museo";
   font-weight: 300;
 }
 
 .marqueeStyle {
-  display:inline-block;
+  display: inline-block;
   /* Apply animation to this element */
   -webkit-animation: scrolling-left1 20s linear infinite;
   animation: scrolling-left1 20s linear infinite;
 }
 
 .marqueeStyle2 {
-  display:inline-block;
+  display: inline-block;
   /* Apply animation to this element */
   -webkit-animation: scrolling-left2 20s linear infinite;
   animation: scrolling-left2 20s linear infinite;
@@ -42,28 +42,42 @@ body{
 }
 /* scrolling-left is continuous/repeatly text */
 @keyframes scrolling-left1 {
-    0% {transform: translateX(100%);
-        -webkit-transform: translateX(100%);}
-      100% {transform: translateX(-100%);
-          -webkit-transform: translateX(-100%);}
+  0% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
 }
 @keyframes scrolling-left2 {
-    0% {transform: translateX(0%);
-        -webkit-transform: translateX(0%);}
-      100% {transform: translateX(-200%);
-          -webkit-transform: translateX(-200%);}
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+  }
 }
 
 @-webkit-keyframes scrolling-left1 {
-    0% {-webkit-transform: translateX(100%);}
-      100% {-webkit-transform: translateX(-100%);}
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
 }
 @-webkit-keyframes scrolling-left2 {
-    0% {-webkit-transform: translateX(0%);}
-      100% {-webkit-transform: translateX(-200%);}
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+  }
 }
-
-
 
 /* ///////////////////////////////////////// */
 html,
@@ -132,6 +146,8 @@ q {
   quotes: "" "";
 }
 a img {
+  /* padding-top: 85px; */
+  width: 200px;
   border: none;
 }
 
@@ -225,7 +241,7 @@ hr {
 #footer {
   height: 150px;
   width: 100%;
-  background: #444 url("../images/footer_bg.png") repeat;
+  background: #211e6e url("../images/footer_bg.png") repeat;
   margin: auto;
   margin-top: 1px;
   font-size: 11px;
@@ -235,7 +251,6 @@ hr {
 }
 
 #footer a {
-  
   color: #fff;
 }
 
@@ -516,7 +531,7 @@ blockquote h3 {
 }
 
 body #header_wrapper {
-  background: #212c35 url("../images/header_bg.png") no-repeat top center;
+  background: #0eaed5 url("../images/header_bg.png") no-repeat top center;
   padding: 20px 0 0 0;
   height: 210px;
 }
@@ -529,7 +544,7 @@ body #header_pattern {
 }
 
 body.home #header_wrapper {
-  background: #212c35 url("../images/header_bg.png") no-repeat top center;
+  background: #0eaed5 url("../images/header_bg.png") no-repeat top center;
   padding: 20px 0 0 0;
   height: 430px;
 }
@@ -1311,7 +1326,7 @@ body.home #header_pattern {
 #content_wrapper .sidebar .content .sidebar_widget > li {
   padding: 20px 20px 8px 20px;
   margin: 0 0 30px 0;
-  background: #fff url("../images/bg_ip.png") repeat-x center top;
+  background: #84456e url("../images/bg_ip.png") repeat-x center top;
   border: 1px solid #ccc;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
