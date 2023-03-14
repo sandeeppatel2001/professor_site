@@ -1,29 +1,73 @@
+// const { text } = require("body-parser");
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+//////////////////////////////////////////////////////
+
 let h5 = document.getElementById("researchh5");
 let data = ["Ram", "Shyam", "Sita", "Gita"];
 document.getElementById("research").addEventListener("click", () => {
-  let text = prompt("Please Enter Your Password", "");
-  let hr = document.createElement("hr");
-  h5.appendChild(hr);
+  // let text = prompt("Please Enter Your Password", "");
+  let text;
+  swal({
+    title: "Enter text address",
 
-  let li = document.createElement("a");
-  li.innerText = text;
-  h5.appendChild(li);
-  let data = { text };
-  const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/researchsave";
-  const urlParams = data;
+    input: "textarea",
+  }).then(function (res) {
+    console.log(res);
 
-  req.open("POST", baseUrl, true);
-  req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  req.send(JSON.stringify(urlParams));
+    text = res.value;
+    console.log(text);
 
-  req.onreadystatechange = async function () {
-    // Call a function when the state changes.
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-      const nodedata = JSON.parse(this.responseText);
-      console.log("iiiii", nodedata);
+    let hr = document.createElement("hr");
+    h5.appendChild(hr);
+
+    let li = document.createElement("a");
+    li.innerText = text;
+    h5.appendChild(li);
+    text = text.trim();
+    if (text) {
+      let data = { text };
+      const req = new XMLHttpRequest();
+      const baseUrl = "http://localhost:3000/researchsave";
+      const urlParams = data;
+
+      req.open("POST", baseUrl, true);
+      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      req.send(JSON.stringify(urlParams));
+
+      req.onreadystatechange = async function () {
+        // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          const nodedata = JSON.parse(this.responseText);
+          console.log("iiiii", nodedata);
+        }
+      };
+      swal({
+        type: "success",
+        html: "Your text: " + text,
+      });
+    } else {
+      swal({
+        type: "failed",
+        html: "please fill all input ",
+      });
     }
-  };
+  });
 
   // data.forEach((item) => {
   //   let hr = document.createElement("hr");
@@ -37,43 +81,67 @@ document.getElementById("research").addEventListener("click", () => {
 let newsul = document.getElementById("aa");
 
 document.getElementById("newspen").addEventListener("click", () => {
-  let text = prompt("heading", "");
+  // let text = prompt("heading", "");
 
-  let textd = prompt("detail", "");
+  // let textd = prompt("detail", "");
   //////////////////////////////
-  if (text.length && textd.length) {
-    let li = document.createElement("li");
-    let h6 = document.createElement("h6");
-    let p = document.createElement("p");
-    p.setAttribute("class", "hi");
+  let textd, text;
+  swal({
+    title: "Enter heading and detail address",
 
-    h6.innerText = text;
+    html: `
+    <input
+    class="swal2-input"
+    id="range-value">`,
+    input: "textarea",
+  }).then(function (res) {
+    console.log(res);
+    let text = document.getElementById("range-value").value;
+    console.log("text", text);
+    textd = res.value;
+    if (text.length && textd.length) {
+      let li = document.createElement("li");
+      let h6 = document.createElement("h6");
+      let p = document.createElement("p");
+      p.setAttribute("class", "hi");
 
-    li.appendChild(h6);
+      h6.innerText = text;
 
-    p.append(textd);
-    li.append(p);
-    newsul.prepend(li);
+      li.appendChild(h6);
 
-    /////////////////////////
+      p.append(textd);
+      li.append(p);
+      newsul.prepend(li);
 
-    let data = { heading: text, detail: textd };
-    const req = new XMLHttpRequest();
-    const baseUrl = "http://localhost:3000/newssave";
-    const urlParams = data;
+      /////////////////////////
 
-    req.open("POST", baseUrl, true);
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify(urlParams));
+      let data = { heading: text.trim(), detail: textd.trim() };
+      const req = new XMLHttpRequest();
+      const baseUrl = "http://localhost:3000/newssave";
+      const urlParams = data;
 
-    req.onreadystatechange = async function () {
-      // Call a function when the state changes.
-      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        const nodedata = JSON.parse(this.responseText);
-        console.log("iiiii", nodedata);
-      }
-    };
-  }
+      req.open("POST", baseUrl, true);
+      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      req.send(JSON.stringify(urlParams));
+
+      req.onreadystatechange = async function () {
+        // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          const nodedata = JSON.parse(this.responseText);
+          console.log("iiiii", nodedata);
+        }
+      };
+      swal({
+        type: "success",
+        html: "Your text: " + text,
+      });
+    } else {
+      swal({
+        type: "failed",
+        html: "please fill all input ",
+      });
+    }
+  });
 });
 let researchfinddata = function () {
   const req = new XMLHttpRequest();
@@ -140,48 +208,110 @@ let newsfinddata = function () {
 };
 
 document.getElementById("researchdel").addEventListener("click", () => {
-  let text = prompt("whichone want to delete", "");
-  console.log(text.length);
-  if (text.length) {
-    let data = { text };
-    const req = new XMLHttpRequest();
-    const baseUrl = "http://localhost:3000/researchdel";
-    const urlParams = data;
+  //let text = prompt("whichone want to delete", "");
+  let text;
+  swal({
+    title: "Enter text addressfor delete ",
 
-    req.open("POST", baseUrl, true);
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify(urlParams));
+    input: "textarea",
+  }).then(function (res) {
+    text = res.value.trim();
 
-    req.onreadystatechange = async function () {
-      // Call a function when the state changes.
-      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        const nodedata = JSON.parse(this.responseText);
-        console.log("iiiii", nodedata);
-      }
-    };
-  }
+    console.log(text.length);
+    if (text.length) {
+      let data = { text };
+      const req = new XMLHttpRequest();
+      const baseUrl = "http://localhost:3000/researchdel";
+      const urlParams = data;
+
+      req.open("POST", baseUrl, true);
+      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      req.send(JSON.stringify(urlParams));
+
+      req.onreadystatechange = async function () {
+        // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          const nodedata = JSON.parse(this.responseText);
+          console.log("iiiii", nodedata);
+        }
+      };
+    } else {
+      swal({
+        type: "failed",
+        html: "please fill all input ",
+      });
+    }
+  });
 });
 /////////////////////////////
 document.getElementById("newsdel").addEventListener("click", () => {
-  let text = prompt("whichone want to delete", "");
-  console.log(text.length);
-  if (text && text.length) {
-    let data = { text };
-    const req = new XMLHttpRequest();
-    const baseUrl = "http://localhost:3000/newsdel";
-    const urlParams = data;
+  let text;
+  swal({
+    title: "Enter text addressfor delete ",
 
-    req.open("POST", baseUrl, true);
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify(urlParams));
+    input: "textarea",
+  }).then(function (res) {
+    text = res.value.trim();
+    console.log(text.length);
+    if (text && text.length) {
+      let data = { text };
+      const req = new XMLHttpRequest();
+      const baseUrl = "http://localhost:3000/newsdel";
+      const urlParams = data;
 
-    req.onreadystatechange = async function () {
-      // Call a function when the state changes.
-      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        const nodedata = JSON.parse(this.responseText);
-        console.log("iiiii", nodedata);
-      }
-    };
-  }
+      req.open("POST", baseUrl, true);
+      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      req.send(JSON.stringify(urlParams));
+
+      req.onreadystatechange = async function () {
+        // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          const nodedata = JSON.parse(this.responseText);
+          console.log("iiiii", nodedata);
+        }
+      };
+      swal({
+        type: "success",
+        html: "Your text: " + text,
+      });
+    } else {
+      swal({
+        type: "failed",
+        html: "please fill all input ",
+      });
+    }
+  });
 });
 newsfinddata();
+
+// swal({
+//   title: "Are you sure?",
+//   text: "Some text.",
+//   type: "warning",
+//   showCancelButton: true,
+//   confirmButtonColor: "#DD6B55",
+//   confirmButtonText: "Yes!",
+//   cancelButtonText: "No.",
+// }).then(() => {
+//   if (result.value) {
+//     // handle Confirm button click
+//   } else {
+//     // result.dismiss can be 'cancel', 'overlay', 'esc' or 'timer'
+//   }
+// });
+
+// swal({
+//   title: "Enter email address",
+//   input: "textarea",
+//   html:
+//     "You can use <b>bold text</b>, " +
+//     '<a href="//sweetalert2.github.io">links</a> ' +
+//     "and other HTML tags ",
+// }).then(function (email) {
+//   console.log(email.value);
+//   swal({
+//     type: "success",
+//     html: "Your email: " + email.value,
+//   });
+// });
+// console.log("Y", y);

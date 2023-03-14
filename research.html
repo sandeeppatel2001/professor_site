@@ -14,7 +14,11 @@
     <link rel='stylesheet' id='vim_css-css' href='./js/skins/vim.css' type='text/css' media='all' /> 
     <link rel='stylesheet' id='colorpicker_css-css' href='./js/colorpicker/css/colorpicker.css' type='text/css' media='all' /> 
     
-    
+    <style>
+        h1,h2,h3,h4,h5,h6,p{
+            color:black
+        }
+    </style>
     <script>
         function passWord() {
         var testV = 1;
@@ -70,21 +74,23 @@
                             </div> 
                             </div> <!-- End main
                             nav -->
-    
+                            
                     </div>
-    
+                    
                     <br class="clear"/>
     
-            <div class="page_caption"> <div class="caption_inner"> <div class="caption_header"> <h2 class="cufon">RESEARCH</h2> </div> </div> </div>
-    
-            <div id="header_pattern"></div>
+            <div class="page_caption"> <div class="caption_inner"> <div class="caption_header"> <h2 class="">RESEARCH</h2> </div> </div> </div>
+            <div style="float: right; padding-right: 25px;font-size: 240% ; font-weight: bolder;" id="del">🗑</div>
+            <div style="float: right;padding-right: 25px;font-size: 240% ; font-weight: bolder;" id="plus">➕</div>
+            <div id="header_pattern"> </div>
     
             </div> <!-- End header -->
-    
+             
             <!-- Begin content --> <div id="content_wrapper">
     
                 <div class="inner">
-    
+
+                    
                     <!-- Begin main content --> 
                     <div class="inner_wrapper">
     
@@ -92,26 +98,25 @@
     
     
                     <div class="post_wrapper" style="text-align:justify"> 
-                        <font size ="3"> 
-                            We are investigating the effects of thermo-electro-mechanical excursions, such as mechanical and thermal stresses, temperature, electric field, magnetic field, etc., 
-                            on the <b> integrity of structures at various length scales. </b> The systems of our interest ranges from small volume/ length-scale structures, such as high temperature coatings, 
+                        <font id="font" size ="3" > 
+                            
+                            <h4>My Reasearch</h4>
+                            <p>
+                                We are investigating the effects of thermo-electro-mechanical excursions, such as mechanical and thermal stresses, temperature, electric field, magnetic field, etc., 
+                            on the  integrity of structures at various length scales.  The systems of our interest ranges from small volume/ length-scale structures, such as high temperature coatings, 
                             thin film systems, microelectronic packages, CNT and graphene foams, etc., to standard bulk structures. 
-                            Concurrently, we are also studying <b> electromigration </b> in both solid and liquid metals, particularly to harness its prowess of patterning at micro- and nano-scales.
-                             </br></br>
-                             
-                             We are primarily experimentalists; however, we regularly use finite element analysis and crystal plasticity to understand the experimental results. 
-                             By infusing people from different backgrounds, we are striving to form an interdisciplinary research program at IISc, Bangalore.
-                            <br/><br />
+                            Concurrently, we are also studying  electromigration  in both solid and liquid metals, particularly to harness its prowess of patterning at micro- and nano-scales.
+                            </p>
+                           
                             
-                            Please follow the links given below to learn more about some of our works:
-                            
-                            
-                            <div class="sidebar_content" style="position:relative;left:50px;width: 800px"> 
-                                <a href="research_pg3.html">Mechanical behaviour of materials (including electric, magnetic field and size effects) </a> <br>
-                                 <a href="research_pg2.html">Electromigration: Fundamentals and constructive applications</a><br> 
-                            </div>
-    
                             </font> 
+                            <div class="sidebar_content" style="position:relative;left:50px;width: 800px"> 
+                                <a href="research_pg3.html">Mechanical behaviour of materials (including electric, magnetic field and size effects) </a>
+                                <hr>
+                                <a href="research_pg2.html">Electromigration: Fundamentals and constructive applications</a> 
+                                
+                
+                            </div>
                     </div>
                     </div>
                     <br class="clear"/> </div>
@@ -138,4 +143,6 @@
     
     </div></div>
     
-    </body> </html> 
+    <script src="./research.js"></script> 
+    </body>
+    </html> 
