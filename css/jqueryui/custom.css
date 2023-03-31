@@ -381,6 +381,8 @@ hr {
 }
 
 #footer {
+  bottom: 0;
+  position: fixed;
   height: 150px;
   width: 100%;
   background: #211e6e url("../images/footer_bg.png") repeat;
