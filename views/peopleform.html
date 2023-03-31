@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Uploading</title>
+    <style>
+      #box {
+        border: 1px solid black;
+        /* width: 50%; */
+      }
+      #m {
+        display: flex;
+        /* border: 2px solid black; */
+        flex-direction: column;
+        align-items: center;
+      }
+      form {
+        margin: 20px;
+      }
+      textarea {
+        /* border: none; */
+        /* outline: none; */
+        text-align: center;
+        font-size: 130%;
+      }
+      input {
+        padding: 7px;
+        padding-bottom: 10px;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-size: 117%;
+      }
+      image {
+        border: initial;
+        overflow: hidden;
+      }
+      button {
+        background-color: #26a69a;
+        border: none;
+        border-radius: 2px;
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 2rem;
+        text-transform: uppercase;
+        vertical-align: middle;
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="m">
+      <h><h1>Upload Image on peoplepage</h1></h>
+      <!-- <hr /> -->
+      <div id="box">
+        <form action="/people" method="POST" enctype="multipart/form-data">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              value=""
+              name="name"
+              required
+            />
+          </div>
+          <hr />
+          <div>
+            <label for="name">Member of</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Member of"
+              value=""
+              name="member"
+              required
+            />
+          </div>
+          <hr />
+          <div>
+            <label for="desc">Your Description</label>
+            <textarea
+              id="desc"
+              name="desc"
+              value=""
+              rows="2"
+              placeholder="Description"
+              required
+            >
+            </textarea>
+          </div>
+          <hr />
+          <div>
+            <label for="name">Email</label>
+            <input
+              type="email"
+              id="name"
+              placeholder="email"
+              value=""
+              name="email"
+              required
+            />
+          </div>
+          <hr />
+          <div>
+            <label for="name">Education</label>
+            <textarea
+              id="desc"
+              name="education"
+              value=""
+              rows="2"
+              placeholder="Description"
+              required
+            >
+            </textarea>
+          </div>
+          <hr />
+          <div>
+            <label for="name">Current Research</label>
+            <textarea
+              id="desc"
+              name="curresearch"
+              value=""
+              rows="2"
+              placeholder="Current Research"
+              required
+            >
+            </textarea>
+          </div>
+          <hr />
+          <div>
+            <label for="name">Resume</label>
+            <input
+              type="url"
+              id="name"
+              placeholder="Url"
+              value=""
+              name="resume"
+              required
+            />
+          </div>
+          <hr />
+          <div>
+            <label for="image">Upload Image</label>
+            <input type="file" id="image" name="image" value="" required />
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

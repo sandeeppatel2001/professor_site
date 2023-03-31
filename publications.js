@@ -1,3 +1,4 @@
+let token = localStorage.getItem("sandeep");
 let main = document.getElementById("inner_wrapper");
 document.getElementById("plus").addEventListener("click", () => {
   let link = "";
@@ -33,6 +34,7 @@ document.getElementById("plus").addEventListener("click", () => {
     tag: tag,
     data: text,
     link: link,
+    token,
   };
 
   req.open("POST", baseUrl, true);
@@ -58,6 +60,7 @@ document.getElementById("del").addEventListener("click", () => {
   const urlParams = {
     tag: text,
     data: text2,
+    token,
   };
 
   req.open("POST", baseUrl, true);
@@ -76,7 +79,8 @@ document.getElementById("del").addEventListener("click", () => {
 let fun1 = function () {
   const req = new XMLHttpRequest();
   const baseUrl = "http://localhost:3000/publicationfind";
-  let data = {};
+  let token = localStorage.getItem("sandeep");
+  let data = { token };
   const urlParams = data;
 
   req.open("POST", baseUrl, true);
@@ -88,8 +92,11 @@ let fun1 = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
       console.log("iiiii", nodedata);
-
-      nodedata.forEach((element) => {
+      if (nodedata.istrue != true) {
+        document.getElementById("plus").style.display = "none";
+        document.getElementById("del").style.display = "none";
+      }
+      nodedata.t.forEach((element) => {
         let link = "";
         let tag = element.tag;
         tag = tag.trim();

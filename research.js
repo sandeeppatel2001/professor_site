@@ -1,5 +1,5 @@
 let font = document.getElementById("font");
-
+let token = localStorage.getItem("sandeep");
 document.getElementById("plus").addEventListener("click", async () => {
   let text = prompt("Please Enter Your tag", "");
   text = text.trim();
@@ -10,11 +10,13 @@ document.getElementById("plus").addEventListener("click", async () => {
   if (!text2) return;
   tag.append(text2);
   font.append(tag);
+
   const req = new XMLHttpRequest();
   const baseUrl = "http://localhost:3000/mainresearchsave";
   const urlParams = {
     tag: text,
     data: text2,
+    token,
   };
 
   req.open("POST", baseUrl, true);
@@ -41,6 +43,7 @@ document.getElementById("del").addEventListener("click", () => {
   const urlParams = {
     tag: text,
     data: text2,
+    token,
   };
 
   req.open("POST", baseUrl, true);
@@ -59,7 +62,8 @@ document.getElementById("del").addEventListener("click", () => {
 let fun1 = function () {
   const req = new XMLHttpRequest();
   const baseUrl = "http://localhost:3000/mainresearchfind";
-  let data = {};
+
+  let data = { token };
   const urlParams = data;
 
   req.open("POST", baseUrl, true);
@@ -70,9 +74,12 @@ let fun1 = function () {
     // Call a function when the state changes.
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
-      // console.log("iiiii", nodedata);
-
-      nodedata.forEach((element) => {
+      console.log("iiiii", nodedata);
+      if (nodedata.istrue != true) {
+        document.getElementById("plus").style.display = "none";
+        document.getElementById("del").style.display = "none";
+      }
+      nodedata.t.forEach((element) => {
         let text = element.tag;
         text.trim();
         let tag = document.createElement(text);

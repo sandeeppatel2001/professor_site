@@ -2,7 +2,7 @@
 
 let slideIndex = 0;
 showSlides();
-
+let token = localStorage.getItem("sandeep");
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -41,7 +41,8 @@ document.getElementById("research").addEventListener("click", () => {
     h5.appendChild(li);
     text = text.trim();
     if (text) {
-      let data = { text };
+      // let token = localStorage.getItem("sandeep");
+      let data = { text, token };
       const req = new XMLHttpRequest();
       const baseUrl = "http://localhost:3000/researchsave";
       const urlParams = data;
@@ -115,7 +116,7 @@ document.getElementById("newspen").addEventListener("click", () => {
 
       /////////////////////////
 
-      let data = { heading: text.trim(), detail: textd.trim() };
+      let data = { token: token, heading: text.trim(), detail: textd.trim() };
       const req = new XMLHttpRequest();
       const baseUrl = "http://localhost:3000/newssave";
       const urlParams = data;
@@ -146,9 +147,10 @@ document.getElementById("newspen").addEventListener("click", () => {
 let researchfinddata = function () {
   const req = new XMLHttpRequest();
   const baseUrl = "http://localhost:3000/researchfind";
-  let data = {};
+  let token = localStorage.getItem("sandeep");
+  let data = { token };
+  console.log(token);
   const urlParams = data;
-
   req.open("POST", baseUrl, true);
   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   req.send(JSON.stringify(urlParams));
@@ -158,8 +160,14 @@ let researchfinddata = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
       // console.log("iiiii", nodedata);
-      nodedata.forEach((element) => {
+      if (nodedata.istrue != true) {
+        document.getElementById("research").style.display = "none";
+        document.getElementById("researchdel").style.display = "none";
+      }
+
+      nodedata.array.forEach((element) => {
         console.log(element);
+
         let hr = document.createElement("hr");
         h5.appendChild(hr);
 
@@ -175,9 +183,10 @@ researchfinddata();
 let newsfinddata = function () {
   const req = new XMLHttpRequest();
   const baseUrl = "http://localhost:3000/newsfind";
-  let data = {};
-  const urlParams = data;
 
+  let data = { token };
+  const urlParams = data;
+  console.log(token);
   req.open("POST", baseUrl, true);
   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   req.send(JSON.stringify(urlParams));
@@ -187,8 +196,12 @@ let newsfinddata = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
       // console.log("iiiii", nodedata);
+      if (nodedata.istrue != true) {
+        document.getElementById("newspen").style.display = "none";
+        document.getElementById("newsdel").style.display = "none";
+      }
 
-      nodedata.forEach((element) => {
+      nodedata.p.forEach((element) => {
         let li = document.createElement("li");
         let h6 = document.createElement("h6");
         h6.setAttribute("class", "news_title");
@@ -219,7 +232,7 @@ document.getElementById("researchdel").addEventListener("click", () => {
 
     console.log(text.length);
     if (text.length) {
-      let data = { text };
+      let data = { text, token };
       const req = new XMLHttpRequest();
       const baseUrl = "http://localhost:3000/researchdel";
       const urlParams = data;
@@ -254,7 +267,7 @@ document.getElementById("newsdel").addEventListener("click", () => {
     text = res.value.trim();
     console.log(text.length);
     if (text && text.length) {
-      let data = { text };
+      let data = { text, token };
       const req = new XMLHttpRequest();
       const baseUrl = "http://localhost:3000/newsdel";
       const urlParams = data;
@@ -315,3 +328,46 @@ newsfinddata();
 //   });
 // });
 // console.log("Y", y);
+document.getElementById("login").addEventListener("click", () => {
+  let text;
+  swal({
+    title: "enter your password ",
+
+    input: "text",
+  }).then(function (res) {
+    text = res.value.trim();
+    console.log(text);
+    if (text) {
+      let data = { text };
+      const req = new XMLHttpRequest();
+      const baseUrl = "http://localhost:3000/login";
+      const urlParams = data;
+
+      req.open("POST", baseUrl, true);
+      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      req.send(JSON.stringify(urlParams));
+
+      req.onreadystatechange = async function () {
+        // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          const nodedata = JSON.parse(this.responseText);
+          console.log("iiiii", nodedata);
+          if (nodedata.istrue == true) {
+            console.log(nodedata.toke);
+            localStorage.setItem("sandeep", nodedata.token);
+            console.log(nodedata.token);
+            swal({
+              type: "success",
+              html: "Your text: " + text,
+            });
+          } else {
+            swal({
+              type: "failed",
+              html: "wrong password please fill correct ",
+            });
+          }
+        }
+      };
+    }
+  });
+});

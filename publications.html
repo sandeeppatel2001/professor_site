@@ -46,28 +46,13 @@
 
             });
         </script>
-        <script>
-            function passWord() {
-                var testV = 1;
-                var pass1 = prompt('Please Enter Your Password', ' ');
-                while (testV < 3) {
-                    if (!pass1)
-                        history.go(-1);
-                    if (pass1.toLowerCase() == "pkl@iisc") {
-                        alert('Welcome to privileged information. Do not redistribute information available on this page to others without our permission. ');
-                        window.open("adbhsdfbkeoiweo.html");
-                        break;
-                    }
-                    testV += 1;
-                    var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.', 'Password');
-                }
-                if (pass1.toLowerCase() != "password" & testV == 3)
-                    history.go(-1);
-                return " ";
-            }
+        
         </script>
         <meta charset="UTF-8">
         <style>
+            img{
+                width: 180px !important;
+            }
             b{
                 
                 font-size: 18px;
@@ -116,16 +101,13 @@
                                 <li>
                                     <a href="gallery.html">Gallery</a>
                                 </li>
-                                <li>
-                                    <a>
-                                        <input type="button" value="Internal" onClick="passWord()">
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
                     <!-- End main nav -->
                 </div>
+                
                 <br class="clear"/>
                 <div class="page_caption" >
                     <div class="caption_inner" style="display: flex;text-align:right;">

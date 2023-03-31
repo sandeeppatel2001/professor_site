@@ -6,7 +6,7 @@ document.getElementById("del").addEventListener("click", () => {
   text = text.trim();
   if (!text) return;
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/gallerydel";
+  const baseUrl = "http://localhost:3000/gallerytdel";
   let data = { text, token };
   const urlParams = data;
 
@@ -16,10 +16,9 @@ document.getElementById("del").addEventListener("click", () => {
 });
 let fun1 = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/galleryfind";
+  const baseUrl = "http://localhost:3000/gallerytfind";
 
-  let data = { token };
-  const urlParams = data;
+  const urlParams = { token };
 
   req.open("POST", baseUrl, true);
   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

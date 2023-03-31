@@ -5,7 +5,7 @@
 <title>Team</title> 
  
  
-
+<script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
 <script type="text/javascript" src="./js/jquery-1.6.2.js"></script> 
 <script type='text/javascript' src='./js/fancybox/jquery.fancybox-1.3.4.pack.js'></script> 
 <script>
@@ -64,30 +64,25 @@
 		});
 </script> 
 
- <script>
-	function passWord() {
-	var testV = 1;
-	var pass1 = prompt('Please Enter Your Password',' ');
-	while (testV < 3) {
-	if (!pass1) 
-		history.go(-1);
-	if (pass1.toLowerCase() == "pkl@iisc") {
-		alert('Welcome to privileged information. Do not redistribute information available on this page to others without our permission. ');
-		window.open("adbhsdfbkeoiweo.html");
-	break;
-			} 
-	testV+=1;
-	var pass1 = 
-		prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-			}
-	if (pass1.toLowerCase()!="password" & testV ==3) 
-		history.go(-1);
-	return " ";
-			} 
-</script>
-
-
  
+
+
+ <style>
+	.img{
+		width: 100% ;
+	}
+	.wie{
+		padding: 20px;
+		width: 600px;
+	}
+	td {
+        font-weight: bold;
+		font-style: italic;
+    }
+	i{
+		font-weight: bold;
+	}
+ </style>
 <meta charset="UTF-8"></head> 
  
  
@@ -119,7 +114,7 @@
                                 <li><a href="teachings.html">Teaching</a></li>
                                 <li><a href="publications.html">Publications</a></li>
 								<li><a href="gallery.html">Gallery</a></li> 
-								<li><a><input type="button" value="Internal" onClick="passWord()"> </a></li> 
+								
 							</ul>
 						</div>					
 					</div> 
@@ -133,7 +128,8 @@
 				<div class="caption_header"> 
 					<h2 class="cufon">CURRENT GROUP MEMBERS</h2> 
 				</div> 
-				  
+				<a href="#" style="float: right; padding-right: 25px;font-size: 240% ; font-weight: bolder;text-decoration: underline;" id="del">🗑</a>
+				<a href="./views/peopleform.html" style="float: right;padding-right: 25px;font-size: 240% ; font-weight: bolder;text-decoration: underline;" id="plus">➕</a>
 			</div> 
 		</div>
 		
@@ -145,422 +141,14 @@
 		<!-- Begin content -->
 		<div id="content_wrapper">
 			
-			<div class="inner">
+			<div  class="inner">
 				
 				<!-- Begin main content --> 
-				<div class="inner_wrapper"> 
+			<div id ="main" class="inner_wrapper"> 
 					
-					<h3> <a style="margin-left:450px"> NANO-MATERIALS LAB Members </a> </h3>
+					<!-- <h3> <a style="margin-left:450px"> NANO-MATERIALS LAB Members </a> </h3> -->
 				<br/>
-				<div class="one_third"><img src="example/priyam.jpeg"  width="70%" alt="" class="frame"/></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Mr. Priyam Srivastava</h4> 
-					<i>Associate Professor</i>
-					<table>
-                     <tr>
-                     <td><b>Ph.D.:</b></td>
-                     <td class="info_left">Mechanical Engineering(Major: Materials, Minor: Design), University of Southern California, Los Angeles, 2007</td>
-                     </tr>
-                     <tr>
-                     <td><b>M.S.:</b></td>
-                     <td class="info_left">Mechanical Engineering (Mechanics and Materials), University of Southern California, Los Angeles , 2005</td>
-                     </tr>
-                     <tr>
-                     <td><b>B. Tech.:</b></td>
-                     <td class="info_left">Mechanical Engineering, Indian Institute of Technology, Kanpur, 2003</td>                     </tr>
-                     <tr>
-                     <td><a id="praveencv" href="cv.html"><u>Resume</u></a></td>
-                     </tr>
-					 <div style="padding: 20px; ">
-						
-						<t>Mr. Priyam Srivastava is pursuing a Ph.D. in Materials Engineering at IIT-Jammu and joined the Nano-materials lab in fall 2022. He also serves as the coordinator of the Indian Sakura Science Club association (ISSCA). His primary research area is related to thermal management materials for electronics applications. He is working to develop high thermal conductive materials with excellent mechanical properties. During M.Tech. (2020-22) in Materials Science and Technology, CUTN, he has developed an MXene-based flexible bio-sensor that can be used for strain measurement, including in-situ applications. As an undergraduate B.Tech. (2016-20) in Mechanical Engineering, he designed a solar racing vehicle and led a team of 40 members to participate in the ESVC-2020 solar vehicle event. He has work experience (two months) in Yoshida Inc. Ltd. Japan as a Mechanical Engineer funded by METI Government of Japan (2020). He has participated in a research exchange program (2018) at Kyushu Institute of Technology, Japan (for ten days), sponsored by Japan Science and Technology. He has gained experience in synthesis, characterization of materials, CAD modeling, and other computational analysis.</t>	
-					 </div>
-                     </table>  
-					
-				</div>			
-				
-			
-				<br class="clear"/><br/><br/>
-				<a name="ananya">
-				<div class="one_third"><a href="research_pg3.html#ananya"><img src="./example/saurabh.jpeg" alt="" width="70%" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Mr Saurabh Kumar jha</h4> 
-					<i>Doctoral Student (Jointly with <a href="http://materials.iisc.ac.in/~qjayaram/" target="_blank">Professor Vikram Jayaram </a>)</i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">ananyat@iisc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.Tech. (Metallurgical and Materials),  <a href="http://www.nifft.ac.in//" target="_blank">National Institute of Foundry & Forge Technology (NIFFT), Ranchi</a></td>
-                     </tr>
-                     <tr>
-                     <td><b>Current Research:</b></td>
-                     <td class="info_left">  <b>Major</b>: Mechanical reliability of bond coats; <b>Minor</b>: Not decided</td>
-                     </tr>
-                     <tr>
-                     <td><a id="anweshacv" href="cv_ananya.pdf"><u>Resume </u></a> </td>
-                     </tr>
-					 <div style="padding: 20px; width: 600px; ">
-						<t>Mr Saurabh Kumar jha is pursuing PhD major in materials engineering at IIT  Jammu. He has done his mtech(2018-2020) from National institute of technology,Jamshedpur in surface science and engineering from department of chemistry His master thesis was self healing coating of aluminium alloy(AA2014) by Sol gel process. During master he has work in corrosion department in CSIR lab in national metallurgy lab Jamshedpur for one year(2019-2020). He has done post graduate diploma in thermal power plant technology (2016-2017).He has also worked in Jindal steel plant as a maintenance engineer in turbine and balance of plant area (2017-2018).His bachelor degree is from darbhanga engineering college  in mechanical engineering.
-						</t>	
-					 </div>
-                     </table> 
-				</div>					
-							
-				
-				<br class="clear"/><br/><br/>
-				<a name="faizan">
-				<div class="one_third"><a href="research.html#faizan"><img src="./example/sravan.jpeg" alt="" width="70%"  class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Sravan S Sankar </h4> 
-					<!-- <i>Doctoral Student (Jointly with <a href="http://materials.iisc.ac.in/~qjayaram/" target="_blank">Professor Vikram Jayaram </a>)</i> -->
-					<table>
-                     <!-- <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">faizanh@iisc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.Tech(Materials Science Engineering) <a href="http://www.iitjammu.ac.in/" target="_blank">iit jammu</a>
-					  <p>  M.E. (Materials Engineering), <a href="http://www.iisc.ac.in/" target="_blank">Indian Institute of Science, Bangalore</a></p></td>
-                     <tr>
-					 <td><b>Current Research:</b></td>
-                     <td class="info_left"> Effect of microstructure on creep under bending</td>
-                     </tr>
-                     <tr>
-                     <td><a id="faizan" href="cv_faizan.pdf"><u>Resume </u></a> </td>
-                     </tr> -->
-					 <div style="padding: 20px; width: 600px; ">
-						<t>Mr Sravan S Sankar is a fourth-year B.Tech student in the materials engineering   department at IIT Jammu. His current BTech project is "Finite Element Mesh Analysis for Force mapping in the context of Ni-based Magneto-Optic System: ANSYS Formulation and Simulation," in which he investigated the micro-mechanics of force distribution to the ribbon samples through a finite element-based mesh approach under various simulated loading conditions along with the high-resolution Transmission Electron Microscopy assisted microstructural analysis. He has an experience as a research intern during his summer internship at the Centre for Materials for Electronics Technology, Pune, where he worked on "Synthesis of Manganese and Vanadium oxide as an Electrode Material for Electrochemical Energy Storage."
-						</t>	
-					 </div>
-                     </table> 
-				</div>
-				
-				<br class="clear"/><br/><br/>
-					 				
-				 
-				
-				
-				
-				
-		
-				
-				<h5> <a style="margin-left:450px"> M.Tech. (Research) Students </a> </h5>
-					<div id="content_wrapper">
-					<div class="inner">
-					<div class="inner_wrapper"> 
-					
-				<!--<br class="clear"/><br/><br/>-->
-				<a name="dinesh">
-				<div class="one_third"><a href="research.html#dinesh"><img src="./example/dinesh.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Dinesh Singh</h4> 
-					<i>M.Tech. (Research) Student (Degree Awarded) </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">dinesh.er23@gmail.com</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.Tech. (Mechanical Engineering) <a href="http://www.integraluniversity.ac.in/" target="_blank"> Integral University, Lucknow </a></td>
-					 </tr>
-                     <tr>
-					 <td><b>Research@IISc:</b></td>
-                     <td class="info_left">  Creep behavior (in bending) of a ferritic steel used in steam turbine blades</td>
-                     </tr>
-					 <td><b> Currently at:</b></td>
-						<td class="info_left"> -- </td>
-					</tr>
-					<tr>
-                     <td><a id="dinesh" href="cv_dinesh.pdf"><u>Resume </u></a> </td>
-                     </tr>
-					<tr>
-						<td><a id="dinesh" href="synopsis_dinesh.pdf"><u>Thesis Synopsis</u></a> </td>
-                     </tr>
-                     </table> 
-				</div>
-  
-				</div>
-				
-								
-				<br class="clear"/><br/><br/>
-				<a name="soudip">
-				<div class="one_third"><a href="research_pg1.html#soudip"><img src="./example/soudip.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Soudip Basu</h4> 
-					<i>ME Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">soudipbasu.1992@gmail.com</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.Tech (Metallurgy and Materials Engineering),  <a href="http://www.iiests.ac.in/" target="_blank">Indian Institute of Engineering Science and Technology, Shibpur , </a> M.E. (Materials Engineering),<a href="http://www.iisc.ernet.in/" target="_blank"> IISc, Bangalore </a></td></a></td>
-                     </tr>								
-                     
-                     <tr>
-					<td><b> Research @ IISc:</b></td>
-					<td class="info_left"> Synthesis, mechanical behavior and electro-thermal actuation in rGO foams  </td>
-					</tr>
-                     
-                     <tr>
-                     <td><b>Currently at:</b></td>
-                     <td class="info_left"> PhD student at IIT-Bombay, Mumbai</td>
-                     </tr>
-                     <tr>
-                     <td><a id="anweshacv" href="cv_soudip.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>
-				
-				<br class="clear"/><br/><br/>
-				<a name="abhilash">
-				<div class="one_third"><a href="research.html#abhilash"><img src="./example/abhilash.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Abhilash Agnihotri </h4> 
-					<i>ME Student (Jointly with Dr. R. Ravi)</i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left"> abhilasha@iisc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.E. (Metallurgical and Materials Engineering) <a href="http://www.nitk.ac.in/" target="_blank"> NIT, Surathkal</a></td>
-					  <tr>
-                     <tr>
-					 <td><b>Research @ IISc:</b></td>
-                     <td class="info_left"> Effect of electric current on whiskering in Sn</td>
-                     </tr>
-                     
-					 <tr>
-                     <td><b>Currently at:</b></td>
-                     <td class="info_left"> United Technologies (UTC), Bangalore </td>
-                     </tr>
-					 
-					 <tr>
-                     <td><a id="abhilash" href="cv_abhilash.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>	
-				
-				<br class="clear"/><br/><br/>
-				<a name="shubham">
-				<div class="one_third"><a href="research.html#shubham"><img src="./example/shubham.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Shubham Jain </h4> 
-					<i>ME Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">jain@iisc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.E. (Materials and Metallurgical Engineering) <a href="http://www.nitdgp.ac.in/" target="_blank"> NIT, Durgapur</a></td>
-					  <tr>
-                     <tr>
-					 <td><b>Research @ IISc:</b></td>
-                     <td class="info_left"> Effect of magnetic field and electric current on fracture of metallic foils</td>
-                     </tr>
-					 
-					 <tr>
-                     <td><b>Currently at:</b></td>
-                     <td class="info_left"> Applied Materials, Bangalore </td>
-                     </tr>
-					 
-                     <tr>
-                     <td><a id="shubham" href="cv_shubham.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>
-
-	
-				<br class="clear"/><br/><br/>
-				<a name="aditya">
-				<div class="one_third"><a href="research.html#aditya"><img src="./example/aditya.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Aditya Kumar</h4> 
-					<i>ME Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">adityakumar1@iisc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.E. (Metallurgical Engineering) <a href="https://www.bitsindri.ac.in/" target="_blank"> BIT, Sindari</a></td>
-					  <tr>
-                     <tr>
-					 <td><b>Research @ IISc:</b></td>
-                     <td class="info_left"> Creep and failure of steels and superalloys in bending </td>
-                     </tr>
-					 
-					 <tr>
-                     <td><b>Currently at:</b></td>
-                     <td class="info_left"> Applied Materials, Bangalore (on Lien) </td>
-                     </tr>
-					 
-                     <tr>
-                     <td><a id="aditya" href="cv_aditya.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>	
-				
-				
-				<br class="clear"/><br/><br/>
-				<a name="hemant">
-				<div class="one_third"><a href="research.html#hemanta"><img src="./example/hemanta.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Hemanta Kumar Meher</h4> 
-					<i>ME Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">hemantameher@iisc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.E. (Metallurgical Engineering) <a href="http://www.vssut.ac.in/" target="_blank"> Veer Surendra Sai University Of Technology, Burla</a></td>
-					  <tr>
-                     <tr>
-					 <td><b>Research @ IISc:</b></td>
-                     <td class="info_left"> Effect of substrate composition on whiskering </td>
-                     </tr>
-					 
-					 <tr>
-                     <td><b>Currently at:</b></td>
-                     <td class="info_left"> Engineer, SAIL (Visakhapatnam) </td>
-                     </tr>
-					 
-                     <tr>
-                     <td><a id="hemanta" href="cv_hemanta.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>	
-				
-				
-				<br class="clear"/><br/><br/>
-				<a name="saurabh">
-				<div class="one_third"><a href="research.html#saurabh"><img src="./example/saurabh.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Saurabh Kumar</h4> 
-					<i>ME Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">saurabhkuma2@IISc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.E. (Metallurgical Engineering) <a href="http://www.nitrr.ac.in/" target="_blank"> National Institute of Technology, Raipur</a></td>
-					  <tr>
-                     <tr>
-					 <td><b>Research@IISc:</b></td>
-                     <td class="info_left"> Creep of AM A205 alloy </td>
-                     </tr>
-					 <tr>
-                    <td><b>Currently at:</b></td>
-                     <td class="info_left"> Project Assistant, IISc </td>
-                     </tr>
-				
-                     <tr>
-                     <td><a id="saurabh" href="cv_saurabh.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>
-
-								
-				
-					</div>                 
-					</div>		
-					</div>
-			
-			<br class="clear"/><br/><br/>
-			<h5> <a style="margin-left:450px"> B.Sc. (Research) Students </a> </h5>
-					<div id="content_wrapper">
-					<div class="inner">
-					<div class="inner_wrapper"> 
-					
-				<a name="vikas">
-				<div class="one_third"><a href="research_pg1.html#vikas"><img src="./example/vikas.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Vikas Jangid</h4> 
-					<i>BSc (Research) Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">vikasjangid1994@gmail.com</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.Sc. (Research) <a href="http://ug.iisc.ernet.in/" target="_blank">Indian Institute of Science, Bangalore</a></td>
-                     </tr>
-                     <tr>
-                     <td><b>Research @IISc:</b></td>
-                     <td class="info_left"> Creep mechanism of Pb-free, Sn-Ag-Cu (SAC) solders at high temperatures</td>
-                     </tr>
-					 <td><b>Currently at:</b></td>
-                     <td class="info_left"> PhD student at Bordeaux University, France </td>
-                     </tr>
-                     <tr>
-                     <td><a id="vikascv" href="cv_vikas.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>
-				
-				
-				<br class="clear"/><br/><br/>
-				<a name="Yash">
-				<div class="one_third"><a href="research_pg1.html#yash"><img src="./example/yash.png" alt="" class="frame"/></a></a></div> 
-				<div class="two_third last"><br /> 
-					<h4 class="people">Yash Sharma</h4> 
-					<i>BSc (Research) Student </i>
-					<table>
-                     <tr>
-                     <td><b>E-mail:</b></td>
-                     <td class="info_left">yash2@IISc.ac.in</td>
-                     </tr>
-                     <tr>
-                     <td><b>Education:</b></td>
-                     <td class="info_left">B.Sc. (Research) <a href="http://ug.iisc.ernet.in/" target="_blank">Indian Institute of Science, Bangalore</a></td>
-                     </tr>
-                     <tr>
-                     <td><b>Research @IISc:</b></td>
-                     <td class="info_left"> Creep and stress relaxation in thin films</td>
-                     </tr>
-					 <td><b>Currently at:</b></td>
-                     <td class="info_left">  </td>
-                     </tr>
-                     <tr>
-                     <td><a id="yash" href="cv_yash.pdf"><u>Resume </u></a> </td>
-                     </tr>
-                     </table> 
-				</div>
-				
-				</div>	
-				</div>	
-				</div>												
-				<br class="clear"/> 
-				<!--
-				<h5> <a style="margin-left:450px">Summer/Winter Interns</a> </h5>
-				<p> <a style="margin-left:500px"> Sandeep Awasthi, NIT Trichi, Summer 2012</a> </p>
-				<p> <a style="margin-left:500px"> Bikramjit Das, NIT Durgapur, Summer 2012</a> </p>
-				<p> <a style="margin-left:500px"> R. Sujitha, NIT Trichi, Winter 2012</a> </p>
-				<p> <a style="margin-left:500px"> S. Sadanandam, RGUKT, RK valley campus, Summer 2013</a> </p>
-				<p> <a style="margin-left:500px"> Gangasani Niharika, NIT Warangle, Summer 2013</a> </p>
-				<p> <a style="margin-left:500px"> Prashannak Kumar, College of Engineering, Guindy, Summer 2013</a> </p>
-				<p> <a style="margin-left:500px"> Pravin Narendra Kavle, Indian Institute of Technology, Bombay, Mumbai, Winter 2013</a> </p>
-				<p></p>
-				<br class="clear"/>
-				-->
-			</div> 
-			
+		    </div>
 			
 			
 			
@@ -589,6 +177,6 @@
 			
 		</div> 
 		<!-- End footer --> 
- 
+		<script src="./people.js"></script>
 </body> 
 </html> 

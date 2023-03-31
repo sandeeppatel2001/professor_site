@@ -66,32 +66,11 @@
       media="all"
     />
 
-    <script>
-      function passWord() {
-        var testV = 1;
-        var pass1 = prompt("Please Enter Your Password", " ");
-        while (testV < 3) {
-          if (!pass1) history.go(-1);
-          if (pass1.toLowerCase() == "pkl@iisc") {
-            alert(
-              "Welcome to privileged information. Do not redistribute information available on this page to others without our permission. "
-            );
-            window.open("adbhsdfbkeoiweo.html");
-            break;
-          }
-          testV += 1;
-          var pass1 = prompt(
-            "Access Denied - Password Incorrect, Please Try Again.",
-            "Password"
-          );
-        }
-        if ((pass1.toLowerCase() != "password") & (testV == 3)) history.go(-1);
-        return " ";
-      }
-    </script>
-
     <meta charset="UTF-8" />
     <style>
+      #aim {
+        width: 180px !important;
+      }
       .pading {
         margin-top: 40px;
         padding-top: 137px;
@@ -113,7 +92,7 @@
             <!-- Begin logo -->
 
             <a id="custom_logo" href="http://www.iisc.ac.in/"
-              ><img src="./images/IIScLogo.png" alt=""
+              ><img id="aim" src="./images/IIScLogo.png" alt=""
             /></a>
             <!-- End logo -->
           </div>
@@ -130,15 +109,6 @@
                 <li><a href="publications.html">Publications</a></li>
                 <li class="current-menu-item">
                   <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                  <a
-                    ><input
-                      type="button"
-                      value="Internal"
-                      onClick="passWord()"
-                    />
-                  </a>
                 </li>
               </ul>
             </div>
