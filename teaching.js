@@ -11,7 +11,7 @@ document.getElementById("plus").addEventListener("click", async () => {
   tag.append(text2);
   font.append(tag);
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/teachingsave";
+  const baseUrl = "https://polymer.adaptable.app/teachingsave";
   const urlParams = {
     tag: text,
     data: text2,
@@ -38,7 +38,7 @@ document.getElementById("del").addEventListener("click", () => {
   let text2 = prompt("enter you text here", "");
   text2 = text2.trim();
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/teachingdel";
+  const baseUrl = "https://polymer.adaptable.app/teachingdel";
   const urlParams = {
     tag: text,
     data: text2,
@@ -60,7 +60,7 @@ document.getElementById("del").addEventListener("click", () => {
 
 let fun1 = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/teachingfind";
+  const baseUrl = "https://polymer.adaptable.app/teachingfind";
 
   let data = { token };
   const urlParams = data;

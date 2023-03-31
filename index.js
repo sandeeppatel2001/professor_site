@@ -44,7 +44,7 @@ document.getElementById("research").addEventListener("click", () => {
       // let token = localStorage.getItem("sandeep");
       let data = { text, token };
       const req = new XMLHttpRequest();
-      const baseUrl = "http://localhost:3000/researchsave";
+      const baseUrl = "https://polymer.adaptable.app/researchsave";
       const urlParams = data;
 
       req.open("POST", baseUrl, true);
@@ -118,7 +118,7 @@ document.getElementById("newspen").addEventListener("click", () => {
 
       let data = { token: token, heading: text.trim(), detail: textd.trim() };
       const req = new XMLHttpRequest();
-      const baseUrl = "http://localhost:3000/newssave";
+      const baseUrl = "https://polymer.adaptable.app/newssave";
       const urlParams = data;
 
       req.open("POST", baseUrl, true);
@@ -146,7 +146,7 @@ document.getElementById("newspen").addEventListener("click", () => {
 });
 let researchfinddata = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/researchfind";
+  const baseUrl = "https://polymer.adaptable.app/researchfind";
   let token = localStorage.getItem("sandeep");
   let data = { token };
   console.log(token);
@@ -182,7 +182,7 @@ researchfinddata();
 
 let newsfinddata = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/newsfind";
+  const baseUrl = "https://polymer.adaptable.app/newsfind";
 
   let data = { token };
   const urlParams = data;
@@ -234,7 +234,7 @@ document.getElementById("researchdel").addEventListener("click", () => {
     if (text.length) {
       let data = { text, token };
       const req = new XMLHttpRequest();
-      const baseUrl = "http://localhost:3000/researchdel";
+      const baseUrl = "https://polymer.adaptable.app/researchdel";
       const urlParams = data;
 
       req.open("POST", baseUrl, true);
@@ -269,7 +269,7 @@ document.getElementById("newsdel").addEventListener("click", () => {
     if (text && text.length) {
       let data = { text, token };
       const req = new XMLHttpRequest();
-      const baseUrl = "http://localhost:3000/newsdel";
+      const baseUrl = "https://polymer.adaptable.app/newsdel";
       const urlParams = data;
 
       req.open("POST", baseUrl, true);
@@ -340,7 +340,7 @@ document.getElementById("login").addEventListener("click", () => {
     if (text) {
       let data = { text };
       const req = new XMLHttpRequest();
-      const baseUrl = "http://localhost:3000/login";
+      const baseUrl = "https://polymer.adaptable.app/login";
       const urlParams = data;
 
       req.open("POST", baseUrl, true);

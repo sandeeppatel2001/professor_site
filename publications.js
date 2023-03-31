@@ -29,7 +29,7 @@ document.getElementById("plus").addEventListener("click", () => {
   }
 
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/publicationsave";
+  const baseUrl = "https://polymer.adaptable.app/publicationsave";
   const urlParams = {
     tag: tag,
     data: text,
@@ -56,7 +56,7 @@ document.getElementById("del").addEventListener("click", () => {
   let text2 = prompt("enter you text here", "");
   text2 = text2.trim();
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/publicationdel";
+  const baseUrl = "https://polymer.adaptable.app/publicationdel";
   const urlParams = {
     tag: text,
     data: text2,
@@ -78,7 +78,7 @@ document.getElementById("del").addEventListener("click", () => {
 
 let fun1 = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/publicationfind";
+  const baseUrl = "https://polymer.adaptable.app/publicationfind";
   let token = localStorage.getItem("sandeep");
   let data = { token };
   const urlParams = data;

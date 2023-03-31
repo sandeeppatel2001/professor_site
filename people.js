@@ -1,7 +1,7 @@
 let main = document.getElementById("main");
 let fun = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/peoplefind";
+  const baseUrl = "https://polymer.adaptable.app/peoplefind";
   let token = localStorage.getItem("sandeep");
   let data = { token };
   const urlParams = data;
@@ -124,7 +124,7 @@ document.getElementById("del").addEventListener("click", () => {
       let token = localStorage.getItem("sandeep");
       let data = { text, token };
       const req = new XMLHttpRequest();
-      const baseUrl = "http://localhost:3000/peopledel";
+      const baseUrl = "https://polymer.adaptable.app/peopledel";
       const urlParams = data;
 
       req.open("POST", baseUrl, true);
