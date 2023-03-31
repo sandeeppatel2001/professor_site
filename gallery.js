@@ -6,7 +6,7 @@ document.getElementById("del").addEventListener("click", () => {
   text = text.trim();
   if (!text) return;
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/gallerydel";
+  const baseUrl = "https://polymer.adaptable.app/gallerydel";
   let data = { text, token };
   const urlParams = data;
 
@@ -16,7 +16,7 @@ document.getElementById("del").addEventListener("click", () => {
 });
 let fun1 = function () {
   const req = new XMLHttpRequest();
-  const baseUrl = "http://localhost:3000/galleryfind";
+  const baseUrl = "https://polymer.adaptable.app/galleryfind";
 
   let data = { token };
   const urlParams = data;
