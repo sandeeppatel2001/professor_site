@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 @media only screen and (max-width: 500px) {
-  #footer {
+  /* #footer {
     position: fixed !important;
 
     bottom: 0px !important;
-  }
+  } */
   .sidebar_wrapper {
     padding-left: 10px !important;
     padding-right: 0px !important;
