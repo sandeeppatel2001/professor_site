@@ -5,9 +5,21 @@
   box-sizing: border-box;
 }
 @media only screen and (max-width: 800px) {
-  #footer {
-    position: fixed;
-    bottom: 0px;
+  .sidebar_wrapper {
+    padding-right: 0px !important;
+  }
+  .nav,
+  a {
+    font-size: xx-small !important;
+    padding: 0 !important;
+    text-size-adjust: inherit;
+    text-transform: lowercase !important;
+  }
+  .logo {
+    width: 100px !important;
+  }
+  #top_bar {
+    display: flex !important;
   }
 }
 /* Slideshow container */
@@ -672,7 +684,7 @@ blockquote h3 {
 }
 
 #top_bar {
-  height: 22%;
+  /* height: 22%; */
   width: 100%;
   margin: auto;
 }
