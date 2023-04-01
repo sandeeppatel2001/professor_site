@@ -5,13 +5,13 @@
   box-sizing: border-box;
 }
 @media only screen and (max-width: 500px) {
-  .fff {
-    position: absolute;
+  #footer {
+    position: fixed !important;
 
-    bottom: 0px;
+    bottom: 0px !important;
   }
   .sidebar_wrapper {
-    padding-left: 17px;
+    padding-left: 10px !important;
     padding-right: 0px !important;
   }
   .nav,
@@ -31,8 +31,8 @@
 /* Slideshow container */
 .slideshow-container {
   /* max-width: 1000px; */
-  position: fixed;
-  bottom: 0px;
+  position: relative;
+  margin: auto;
 }
 
 /* Hide the images by default */
@@ -690,7 +690,7 @@ blockquote h3 {
 }
 
 #top_bar {
-  /* height: 22%; */
+  height: 22%;
   width: 100%;
   margin: auto;
 }
@@ -1080,7 +1080,7 @@ body.home #header_pattern {
 #content_wrapper {
   width: 100%;
   margin: auto;
-  padding: 10px;
+  padding: 0;
   /* text-shadow: 0 1px 1px #fff; */
 }
 
