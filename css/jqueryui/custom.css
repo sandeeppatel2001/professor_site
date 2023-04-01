@@ -6,7 +6,7 @@
 }
 @media only screen and (max-width: 800px) {
   .sidebar_wrapper {
-    padding-right: 13px !important;
+    padding-right: -3px !important;
   }
   .nav,
   a {
