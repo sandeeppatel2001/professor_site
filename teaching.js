@@ -74,9 +74,9 @@ let fun1 = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
       console.log("iiiii", nodedata);
-      if (nodedata.istrue != true) {
-        document.getElementById("plus").style.display = "none";
-        document.getElementById("del").style.display = "none";
+      if (nodedata.istrue == true) {
+        document.getElementById("plus").style.display = "visible";
+        document.getElementById("del").style.display = "visible";
       }
       nodedata.t.forEach((element) => {
         let text = element.tag;

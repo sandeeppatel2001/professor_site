@@ -160,7 +160,7 @@ let researchfinddata = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
       // console.log("iiiii", nodedata);
-      if (nodedata.istrue != true) {
+      if (nodedata.istrue == true) {
         document.getElementById("research").style.display = "visible";
         document.getElementById("researchdel").style.display = "visible";
       }
@@ -196,7 +196,7 @@ let newsfinddata = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
       const nodedata = JSON.parse(this.responseText);
       // console.log("iiiii", nodedata);
-      if (nodedata.istrue != true) {
+      if (nodedata.istrue == true) {
         document.getElementById("newspen").style.display = "visible";
         document.getElementById("newsdel").style.display = "visible";
       }
