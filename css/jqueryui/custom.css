@@ -4,9 +4,14 @@
 * {
   box-sizing: border-box;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
+  .fff {
+    position: absolute;
+
+    bottom: 0px;
+  }
   .sidebar_wrapper {
-    padding-right: -3px !important;
+    padding-right: 0px !important;
   }
   .nav,
   a {
