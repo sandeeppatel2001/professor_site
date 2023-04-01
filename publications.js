@@ -93,8 +93,8 @@ let fun1 = function () {
       const nodedata = JSON.parse(this.responseText);
       console.log("iiiii", nodedata);
       if (nodedata.istrue == true) {
-        document.getElementById("plus").style.display = "visible";
-        document.getElementById("del").style.display = "visible";
+        document.getElementById("plus").style.visibility = "visible";
+        document.getElementById("del").style.visibility = "visible";
       }
       nodedata.t.forEach((element) => {
         let link = "";
