@@ -161,8 +161,8 @@ let researchfinddata = function () {
       const nodedata = JSON.parse(this.responseText);
       // console.log("iiiii", nodedata);
       if (nodedata.istrue != true) {
-        document.getElementById("research").style.display = "none";
-        document.getElementById("researchdel").style.display = "none";
+        document.getElementById("research").style.display = "visible";
+        document.getElementById("researchdel").style.display = "visible";
       }
 
       nodedata.array.forEach((element) => {
@@ -197,8 +197,8 @@ let newsfinddata = function () {
       const nodedata = JSON.parse(this.responseText);
       // console.log("iiiii", nodedata);
       if (nodedata.istrue != true) {
-        document.getElementById("newspen").style.display = "none";
-        document.getElementById("newsdel").style.display = "none";
+        document.getElementById("newspen").style.display = "visible";
+        document.getElementById("newsdel").style.display = "visible";
       }
 
       nodedata.p.forEach((element) => {
